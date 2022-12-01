@@ -1,0 +1,121 @@
+<h2 class="title">
+  Результаты 104 спринта
+</h2>
+
+<ngl-tabset [variant]="'scoped'" (selectedChange)="changeTab($event)" [selected]="selectedTab$ | async" class="tabs-wrapper">
+  <ng-template ngl-tab label="Цели спринта" id="main">
+    <div class="tabs-wrapper__item">
+      <highcharts-chart
+        [Highcharts]="HighchartsMain"
+        [options]="linechart"
+        class="tabs-wrapper__chart"
+      >
+      </highcharts-chart>
+
+      <ngl-expandable-section title="Информация по спринту" [collapsable]="false" [open]="true" class="section-wrapper">
+        <div class="section">
+          <div class="section__group">
+            <span class="section__group-info">Количество задач: 7</span>
+            <span class="section__group-info">Количество выполненных задач: 7</span>
+            <span class="section__group-info"> Процент выполнения: 100%</span>
+          </div>
+        </div>
+      </ngl-expandable-section>
+
+      <ngl-expandable-section title="Информация по исполнителям" [collapsable]="false" [open]="true">
+        <div class="section">
+          <div class="section__group">
+            <span class="section__group-task">Добавить вложения: фото, файлы</span>
+            <span class="section__group-user">Валентин Южаков, Дмитрий Васильев</span>
+            <span><ngl-badge theme="warning">+</ngl-badge></span>
+          </div>
+
+          <div class="section__group">
+            <span class="section__group-task">Выбор из линейных справочников</span>
+            <span class="section__group-user">Максим Шугаев, Дмитрий Васильев</span>
+            <span><ngl-badge theme="success">+</ngl-badge></span>
+          </div>
+
+          <div class="section__group">
+            <span class="section__group-task">Поддержка полей из 2-уровневых справочников и объекта в Edit Mode</span>
+            <span class="section__group-user">Денис Калошин, Константин Лысов</span>
+            <span><ngl-badge theme="success">+</ngl-badge></span>
+          </div>
+
+          <div class="section__group">
+            <span class="section__group-task">Добавить комментарии (Записи) к Сообщению при редактировании</span>
+            <span class="section__group-user">Максим Шугаев, Всеволод Золотов</span>
+            <span><ngl-badge theme="success">+</ngl-badge></span>
+          </div>
+
+          <div class="section__group">
+            <span class="section__group-task">Изменение статуса сообщения, согласно статусной схеме</span>
+            <span class="section__group-user">Кристина Ялышева, Георгий Меломорданов</span>
+            <span><ngl-badge theme="success">+</ngl-badge></span>
+          </div>
+
+          <div class="section__group">
+            <span class="section__group-task">Поддержка новых полей из справочников в Журнале Сообщений</span>
+            <span class="section__group-user">Максим Шугаев, Георгий Меломорданов</span>
+            <span><ngl-badge theme="success">+</ngl-badge></span>
+          </div>
+
+          <div class="section__group">
+            <span class="section__group-task">Сортировка журнала сообщений</span>
+            <span class="section__group-user">Денис Калошин, Константин Лысов</span>
+            <span><ngl-badge theme="success">+</ngl-badge></span>
+          </div>
+        </div>
+      </ngl-expandable-section>
+    </div>
+  </ng-template>
+
+  <ng-template ngl-tab label="Дополнительные цели" id="tech">
+    <div class="tabs-wrapper__item">
+      <highcharts-chart
+        [Highcharts]="HighchartsTech"
+        [options]="linechartTech"
+        class="tabs-wrapper__chart"
+      >
+      </highcharts-chart>
+
+      <ngl-expandable-section title="Информация по дополнительным задачам спринта" [collapsable]="false" [open]="true" class="section-wrapper">
+        <div class="section">
+          <div class="section__group">
+            <span class="section__group-info">Количество задач: 5</span>
+            <span class="section__group-info">Количество выполненных задач: 0</span>
+            <span class="section__group-info"> Процент выполнения: 00%</span>
+          </div>
+        </div>
+      </ngl-expandable-section>
+
+      <ngl-expandable-section title="Информация по исполнителям" [collapsable]="false" [open]="true">
+        <div class="section">
+          <div class="section__group">
+            <span class="section__group-task">Поддержка Линейных справочников в ReadOnly и EditMode</span>
+            <span class="section__group-user">Роман Веремьев, Константин Лысов</span>
+            <span><ngl-badge theme="error">-</ngl-badge></span>
+          </div>
+
+          <div class="section__group">
+            <span class="section__group-task">Загрузчик НСИ по классификаторам из Excel</span>
+            <span class="section__group-user">Денис Калошин</span>
+            <span><ngl-badge theme="error">-</ngl-badge></span>
+          </div>
+
+          <div class="section__group">
+            <span class="section__group-task">Добавление полей "Причина" и "Описание причины" при Создании и в EditMode +ReadOnly</span>
+            <span class="section__group-user">Валентин Южаков, Всеволод Золотов</span>
+            <span><ngl-badge theme="error">-</ngl-badge></span>
+          </div>
+
+          <div class="section__group">
+            <span class="section__group-task">Фильтрация справочников по профилю</span>
+            <span class="section__group-user">Максим Шугаев, Константин Лысов</span>
+            <span><ngl-badge theme="error">-</ngl-badge></span>
+          </div>
+        </div>
+      </ngl-expandable-section>
+    </div>
+  </ng-template>
+</ngl-tabset>
